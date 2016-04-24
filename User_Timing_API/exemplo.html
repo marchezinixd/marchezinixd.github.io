@@ -1,0 +1,39 @@
+<hmtl>
+  <head>
+    <title>Audio Web Kit</title>
+    <meta charset="utf8" ></meta>
+    <link rel="stylesheet" href="exemplo.css">
+  </head>
+  <body id="corpo">
+
+    <div class='conteudo'>
+        <input class='music' type="text" id="track1" list='musicas' required/>
+        <input class='music' type="text" id="track2" list='musicas' required/>
+        <datalist id="musicas">
+          <option value="Wombass">
+          <option value="Last Night">
+          <option value="music">
+        </datalist>
+        <div class='esquerda'>
+          <h2>Drop Bass</h2>
+          <input min="0" max="1" step='0.01'value="1" oninput="dropaBass(this);" type="range"></input>
+        </div>
+
+        <div class='direita'>
+          <h2>Quality Bar</h2>
+          <input min="0" max="1" step='0.01'value="0" oninput="changeQuality(this);" type="range"></input>
+          <h2>Volume Bar</h2>
+          <input min="0" max="100" value="100" oninput="volume.changeVolume(this);" type="range"></input>
+          <h2>Crossing Bar</h2>
+          <input min="0" max="100" value="0" oninput="crossfade(this);" type="range"></input>
+          <br>
+          <button id='play'>Play/Stop</button>
+        </div>
+    </div>
+
+
+    <script src='exemplo.js'></script>
+
+  </body>
+
+</hmtl>
